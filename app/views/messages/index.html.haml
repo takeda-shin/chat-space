@@ -6,8 +6,10 @@
       .side-header__box
         .side-header__box__user-name
           takeda
-        .side-header__box__new-group
-        .side-header__box__edit-user
+        = link_to "###", class: "side-header__box__new-group" do
+          = fa_icon 'edit', class: "side-header__box__icon"
+        = link_to "###", class: "side-header__box__edit-user" do
+          = fa_icon 'cog', class: "side-header__box__icon"
     .groups
       .group
         .group__group-name
@@ -18,14 +20,19 @@
     .main-header
       .main-header__left-box
         .main-header__left-box__group-name
-        .main-header__left-box__group-membersa
+          sample
+        .main-header__left-box__group-members
+          Members: edao takeda
       .main-header__edit-btn
     .messages
       .message
         .message__upper-info
           .message__upper-info__talker
+            takeda
           .message__upper-info__date
+            2019/09/30 20:38:50
         .message__text
+          I'm hungry!
     .form
       .form__input-box
         .form__input-box__image
