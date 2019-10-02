@@ -1,6 +1,6 @@
 .information-box {
   background-color: #38AEF0;
-  color: #fff;
+  color: $mainWhiteColor;
   text-align: center;
 }
 
@@ -21,11 +21,11 @@
           float: left;
         }
         &__new-group {
-          color: #fff;
+          color: $mainWhiteColor;
           float: right;
         }
         &__edit-user {
-          color: #fff;
+          color: $mainWhiteColor;
           float: right;
         }
       }
@@ -66,13 +66,14 @@
         }
       }
       &__edit-btn{
-        color: #38AEF0;
+        border: solid 1px $mainBlueColor;
+        color: $mainBlueColor;
         height: 40px;
         line-height: 40px;
         margin: 28px 0;
         padding:0 20px;
         float: right;
-        border: solid 1px #38AEF0;
+        border: solid 1px $mainBlueColor;
       }
     }
     .messages {
@@ -113,7 +114,7 @@
         height: 50px;
         width: calc(100vw - 300px - 195px);
         line-height: 90px;
-        background-color: #fff;
+        background-color: $mainWhiteColor;
         position: absolute;
         top: 20px;
         left: 40px;
@@ -141,8 +142,8 @@
       &__submit-btn {
         height: 50px;
         width: 100px;
-        background-color: #38AEF0;
-        color: #fff;
+        background-color: $mainBlueColor;
+        color: $mainWhiteColor;
         text-align: center;
         line-height: 50px;
         float: right;
