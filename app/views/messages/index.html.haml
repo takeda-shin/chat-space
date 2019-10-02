@@ -1,4 +1,4 @@
-.flash-box
+.information-box
   グループを作成しました
 .container
   .chat-side
@@ -36,5 +36,10 @@
           I'm hungry!
     .form
       .form__input-box
-        .form__input-box__image
+        .form__input-box__contents
+          .form__input-box__contents__text
+            Type a message
+          = link_to "###", class: "form__input-box__contents__image" do
+            = fa_icon 'image', class: "form__input-box__contents__icon"
       .form__submit-btn
+        Send

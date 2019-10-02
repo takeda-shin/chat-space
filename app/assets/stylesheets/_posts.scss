@@ -1,4 +1,4 @@
-.flash-box {
+.information-box {
   background-color: #38AEF0;
   color: #fff;
   text-align: center;
@@ -114,6 +114,47 @@
       height: 90px;
       bottom: 0;
       background-color: #ddd;
+      position: relative;
+      &__input-box {
+        height: 50px;
+        width: calc(100vw - 300px - 195px);
+        line-height: 90px;
+        background-color: #fff;
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        &__contents {
+          line-height: 50px;
+          position: relative;
+          &__text {
+            color: #434A54;
+            font-size: 16px;
+            padding-left: 10px; 
+            line-height: 50px;
+            float: left;
+          }
+          &__image{
+            color: #000;
+            float: right;
+            position: absolute;
+            right: 10px;
+          }
+        }
+      }
+      &__submit-btn {
+        height: 50px;
+        width: 100px;
+        background-color: #38AEF0;
+        color: #FFF;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+        float: right;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        bottom: 0;
+      }
     }
   }
 }
