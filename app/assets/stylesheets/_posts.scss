@@ -6,7 +6,7 @@
 
 .container{
   .chat-side{
-    height: 100vh;
+    height: calc(100vh + 24px);
     width: 300px;
     background-color: #2f3e51;
     float: left;
@@ -78,7 +78,7 @@
     }
     .messages {
       background-color:#fafafa;
-      height: calc(100vh - 190px);
+      height: calc(100vh - 190px + 24px);
       padding: 46px 40px;
       box-sizing: border-box;
       .message {
@@ -107,7 +107,6 @@
     }
     .form {
       height: 90px;
-      bottom: 0;
       background-color: #ddd;
       position: relative;
       &__input-box {
