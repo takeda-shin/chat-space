@@ -15,7 +15,6 @@
       background-color:#253141;
       padding:0 20px;
       &__box {
-        display: flex;
         line-height: 100px;
         &__user-name {
           font-size: 16px;
@@ -24,7 +23,7 @@
           float: left;
         }
         &__new-group {
-          background-color: #fff;
+          color: #fff;
           float: right;
         }
         &__edit-user {
@@ -34,20 +33,20 @@
       }
     }
     .groups {
-      padding: 0 20px;
+      padding: 20px 20px 0;
+      height: calc(100vh - 100px);
       .group {
         height: 71px;
         &__group-name{
           font-size: 15px;
           font-weight: bold;
           color: #fff;
-          margin-top:20px;
         }
         &__latest-message{
           font-size: 11px;
           font-weight: bold;
           color: #fff;
-          margin: 5px 0 20px 0;
+          margin: 5px 0 40px;
         }
       }
     }
@@ -59,8 +58,9 @@
     .main-header {
       height: 100px;
       padding:0 40px;
-      border-bottom: 1px solod #eeeeee;
+      border-bottom: 1px solid #eeeeee;
       &__left-box {
+        float: left;
         &__group-name {
           font-size: 20px;
           color: #333333;
@@ -71,11 +71,21 @@
           color: #999999;
         }
       }
+      &__edit-btn{
+        color: #38AEF0;
+        height: 40px;
+        line-height: 40px;
+        margin: 28px 0;
+        padding:0 20px;
+        float: right;
+        border: solid 1px #38AEF0;
+      }
     }
     .messages {
       background-color:#fafafa;
-      height: calc(100vh - 100px - 90px);
+      height: calc(100vh - 190px);
       padding: 46px 40px;
+      box-sizing: border-box;
       .message {
         height: 105px;
         padding-bottom: 40px;
