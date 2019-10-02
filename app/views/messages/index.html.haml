@@ -28,7 +28,10 @@
         .form__input-box__contents
           .form__input-box__contents__text
             Type a message
-          = link_to "###", class: "form__input-box__contents__image" do
-            = fa_icon 'image', class: "form__input-box__contents__icon"
+          %form{:class => "form__input-box__contents__image"}
+            %label
+              %span
+              = fa_icon 'image', class: "form__input-box__contents__icon"
+              %input{:type => "file", :class => "form__input-box__contents__image__select"}
       .form__submit-btn
         Send

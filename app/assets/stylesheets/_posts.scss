@@ -132,6 +132,9 @@
             float: right;
             position: absolute;
             right: 10px;
+            &__select {
+              display: none;
+            }
           }
         }
       }
