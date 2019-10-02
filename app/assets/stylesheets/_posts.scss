@@ -17,9 +17,7 @@
       &__box {
         line-height: 100px;
         &__user-name {
-          font-size: 16px;
-          font-weight: bold;
-          color: #fff;
+          @include chat-side-font(16px);
           float: left;
         }
         &__new-group {
@@ -38,14 +36,10 @@
       .group {
         height: 71px;
         &__group-name{
-          font-size: 15px;
-          font-weight: bold;
-          color: #fff;
+          @include chat-side-font(15px);
         }
         &__latest-message{
-          font-size: 11px;
-          font-weight: bold;
-          color: #fff;
+          @include chat-side-font(11px);
           margin: 5px 0 40px;
         }
       }
