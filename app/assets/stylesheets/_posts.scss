@@ -1,9 +1,3 @@
-.information-box {
-  background-color: #38AEF0;
-  color: $mainWhiteColor;
-  text-align: center;
-}
-
 .container{
   .chat-side{
     height: calc(100vh + 24px);
@@ -15,16 +9,14 @@
       background-color:#253141;
       padding:0 20px;
       &__box {
+        height: 100px;
         line-height: 100px;
         &__user-name {
           @include chat-side-font(16px);
           float: left;
         }
-        &__new-group {
-          color: $mainWhiteColor;
-          float: right;
-        }
-        &__edit-user {
+        &__icon {
+          line-height: 100px;
           color: $mainWhiteColor;
           float: right;
         }
