@@ -90,10 +90,14 @@
             color: #999999;
             float: left;
           }
-        &__text{
-          font-size: 14px;
-          font-weight: #434A54;
         }
+        &__lower{
+          &__text{
+            font-size: 14px;
+            font-weight: #434A54;
+          }
+          &__image{
+          }
         }
       }
     }
