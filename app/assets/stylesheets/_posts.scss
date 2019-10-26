@@ -90,10 +90,14 @@
             color: #999999;
             float: left;
           }
-        &__text{
-          font-size: 14px;
-          font-weight: #434A54;
         }
+        &__lower{
+          &__text{
+            font-size: 14px;
+            font-weight: #434A54;
+          }
+          &__image{
+          }
         }
       }
     }
@@ -117,6 +121,7 @@
             font-size: 16px;
             padding-left: 10px; 
             line-height: 50px;
+            width: calc(100vw - 300px - 195px);
             float: left;
           }
           &__image{

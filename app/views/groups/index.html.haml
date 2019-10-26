@@ -1,25 +1,2 @@
 .container
   = render partial: "shared/side_bar"
-  .chat-main
-    .main-header
-      .main-header__left-box
-        .main-header__left-box__group-name
-          sample
-        .main-header__left-box__group-members
-          Members: user1 user2
-      .main-header__edit-btn
-        Edit
-    .messages
-      = render partial: "messages/message"
-    .form
-      .form__input-box
-        .form__input-box__contents
-          .form__input-box__contents__text
-            Type a message
-          %form{:class => "form__input-box__contents__image"}
-            %label
-              %span
-              = fa_icon 'image', class: "form__input-box__contents__icon"
-              %input{:type => "file", :class => "form__input-box__contents__image__select"}
-      .form__submit-btn
-        Send
