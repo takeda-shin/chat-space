@@ -46,7 +46,7 @@ $(function(){
     .fail(function() {
       alert("メッセージ送信に失敗しました")
     })
-    .always(() => {
+    .always(function() {
       $('.form__submit-btn').removeAttr('disabled');
     });
   })
