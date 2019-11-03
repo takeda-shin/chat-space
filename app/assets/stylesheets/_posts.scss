@@ -73,6 +73,7 @@
       height: calc(100vh - 190px + 24px);
       padding: 46px 40px;
       box-sizing: border-box;
+      overflow: scroll;
       .message {
         height: 105px;
         padding-bottom: 40px;
@@ -97,6 +98,7 @@
             font-weight: #434A54;
           }
           &__image{
+            
           }
         }
       }
