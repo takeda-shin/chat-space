@@ -36,7 +36,7 @@ $(function(){
     .done(function(data) {
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('.form__input-box').val('')
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
   })
 })
