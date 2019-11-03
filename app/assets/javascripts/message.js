@@ -37,6 +37,10 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      $('.form__input-box__contents__text').val("");
     })
+    .always(() => {
+      $('.form__submit-btn').removeAttr('disabled');
+    });
   })
 })
