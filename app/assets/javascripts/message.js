@@ -39,6 +39,9 @@ $(function(){
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $('.form__input-box__contents__text').val("");
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました")
+    })
     .always(() => {
       $('.form__submit-btn').removeAttr('disabled');
     });
