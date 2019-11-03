@@ -7,7 +7,7 @@ $(function(){
                   <div class="message">
                     <div class="message__upper-info">
                       <div class="message__upper-info__talker">
-                      ${message.user}
+                      ${message.user_name}
                       </div>
                       <div class="message__upper-info__date">
                       ${message.created_at}
@@ -34,6 +34,9 @@ $(function(){
       contentType: false
     })
     .done(function(data) {
+      var html = buildHTML(data);
+      $('.messages').append(html);
+      $('.form__input-box').val('')
     })
   })
 })
