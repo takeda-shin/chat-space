@@ -50,3 +50,7 @@ $(function() {
       });
   })
 })
+
+$(document).on('click','.user-search-add', function(){
+  console.log("イベント発火")
+})
