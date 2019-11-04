@@ -6,7 +6,8 @@
         .main-header__left-box__group-name
           = @group.name
         .main-header__left-box__group-members
-          = @group.users.name
+          - @group.users.each do |user|
+            = user.name
       .main-header__edit-btn
         Edit
     .messages
