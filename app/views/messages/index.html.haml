@@ -9,7 +9,7 @@
           - @group.users.each do |user|
             = user.name
       .main-header__edit-btn
-        Edit
+        = link_to "Edit", edit_group_path(params[:group_id]), method: :get
     .messages
       = render partial: "message", collection: @messages
     .form
