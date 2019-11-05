@@ -92,26 +92,29 @@ $(function(){
   })
 
   var reloadMessages = function() {
-    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    last_message_id = $('.message__lower').attr("data-message-id");
-    console.log(last_message_id)
-    $.ajax({
-      //ルーティングで設定した通り/groups/id/api/messagesとなるように
-      url: 'api/messsages',
-      type: 'get',
-      dataType: 'json',
-      data: {id: last_message_id}
-    })
-    .done(function(messages) {
-      var insertHTML = '';
-      //配列messagesの中身を一つ一つを取り出し、HTMLに変換した物を入れ物に入れる
-      messages.forEach(function(message) {
-        insertHTML = buildMessageHTML(message);
-      });
-      $('.message').append(insertHTML);
-    })
-    .fail(function() {
-      console.log('error');
-    })
+    if($('.messages')[0]) {
+      //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
+      last_message_id = $('.message:last').data('message-id');
+      $.ajax({
+        //ルーティングで設定した通り/groups/id/api/messagesとなるように
+        url: 'api/messages',
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id},
+     })
+      .done(function(data) {
+        var insertHTML = '';
+        //配列messagesの中身を一つ一つを取り出し、HTMLに変換した物を入れ物に入れる
+        data.forEach(function(message) {
+          insertHTML = buildMessageHTML(message);
+        });
+        $('.messages').append(insertHTML);
+        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      })
+      .fail(function() {
+        console.log('error');
+      })
+    }
   }
-})
+  setInterval(reloadMessages, 5000);
+});
