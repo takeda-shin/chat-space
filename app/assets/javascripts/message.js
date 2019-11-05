@@ -49,4 +49,22 @@ $(function(){
       $('.form__submit-btn').removeAttr('disabled');
     });
   })
+
+  var reloadMessages = function() {
+    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
+    last_message_id = $('.message__lower').attr("data-message-id");
+    $.ajax({
+      //ルーティングで設定した通り/groups/id/api/messagesとなるように
+      url: 'api/messsages',
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      console.log('success');
+    })
+    .fail(function() {
+      console.log('error');
+    })
+  }
 })
