@@ -4,7 +4,7 @@
       = message.user.name
     .message__upper-info__date
       = message.created_at.strftime("%Y-%m-%d %H:%M")
-  .message__lower
+  .message__lower{data: {'message' => message.id }}
     - if message.text.present?
       %p.message__lower__text
         = message.text
