@@ -1,10 +1,10 @@
-.message
+.message{data: {'id' => message.id }}
   .message__upper-info
     .message__upper-info__talker
       = message.user.name
     .message__upper-info__date
       = message.created_at.strftime("%Y-%m-%d %H:%M")
-  .message__lower{data: {'message' => message.id }}
+  .message__lower
     - if message.text.present?
       %p.message__lower__text
         = message.text
