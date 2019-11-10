@@ -34,35 +34,23 @@ $(function(){
                         ${message.created_at}
                       </div>
                     </div>`
-    if (message.text && message.image.url) {
-      var html = `<div class="message" data-id="${message.id}">
-                    ${upperInfo}
-                    <div class="message__lower">
-                      <p class="message__lower__text">
-                        ${message.text}
-                      </p>
-                      <img src="${message.image.url}" class="message__lower__image">
-                    </div>
-                  </div>`
-    } else if (message.text) {
-      var html = `<div class="message" data-id="${message.id}">
-                    ${upperInfo}
-                    <div class="message__lower">
-                      <p class="message__lower__text">
-                        ${message.text}
-                      </p>
-                    </div>
-                  </div>`
-    } else if (message.image.url) {
-      var html = `<div class="message" data-id="${message.id}">
-                    ${upperInfo}
-                    </div>
-                    <div class="message__lower">
-                      <img src="${message.image.url}" class="message__lower__image">
-                    </div>
-                  </div>`
-    };
-    return html;
+
+    var messageText = message.text ?
+                    `${message.text}`: "";
+
+    var messageImage = message.image.url ?
+                        `<img src="${message.image.url}" class="message__lower__image">`: "";
+
+    var html = `<div class="message" data-id="${message.id}">
+                  ${upperInfo}
+                  <div class="message__lower">
+                    <p class="message__lower__text">
+                      ${messageText}
+                    </p>
+                    ${messageImage}
+                  </div>
+                </div>`
+    return html
   };
 
   $('.new_message').on('submit', function(e) {
