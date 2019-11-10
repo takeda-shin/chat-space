@@ -92,20 +92,17 @@ $(function(){
   })
 
   var reloadMessages = function() {
-    if($('.messages')[0]) {
-      //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-      last_message_id = $('.message:last').data('message-id');
+    if(document.URL.match(/messages/)) {
+      last_message_id = $('.message:last').data('id');
       $.ajax({
-        //ルーティングで設定した通り/groups/id/api/messagesとなるように
         url: 'api/messages',
         type: 'get',
         dataType: 'json',
         data: {id: last_message_id},
-     })
-      .done(function(data) {
+      })
+      .done(function(messages) {
         var insertHTML = '';
-        //配列messagesの中身を一つ一つを取り出し、HTMLに変換した物を入れ物に入れる
-        data.forEach(function(message) {
+        messages.forEach(function(message) {
           insertHTML = buildMessageHTML(message);
         });
         $('.messages').append(insertHTML);
