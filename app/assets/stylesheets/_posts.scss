@@ -75,7 +75,6 @@
       box-sizing: border-box;
       overflow: scroll;
       .message {
-        height: 105px;
         padding-bottom: 40px;
         &__upper-info{
           display: inline-block;
@@ -96,9 +95,6 @@
           &__text{
             font-size: 14px;
             font-weight: #434A54;
-          }
-          &__image{
-            
           }
         }
       }
