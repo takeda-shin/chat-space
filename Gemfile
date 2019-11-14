@@ -72,6 +72,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
  gem 'carrierwave'
  gem 'mini_magick'
  gem 'pry-rails'
+ gem 'fog-aws'
 
  group :production do
    gem 'unicorn', '5.4.1'
