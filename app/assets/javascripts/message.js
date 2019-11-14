@@ -4,22 +4,20 @@ $(function(){
     var image = message.image.url ? 
                `<img class="message__lower__image" src= ${message.image.url} >` : "";
 
-    var html = `<div class="message">
-                  <div class="message">
-                    <div class="message__upper-info">
-                      <div class="message__upper-info__talker">
-                      ${message.user_name}
-                      </div>
-                      <div class="message__upper-info__date">
-                      ${message.created_at}
-                      </div>
+    var html = `<div class="message" data-id= "${message.id}">
+                  <div class="message__upper-info">
+                    <div class="message__upper-info__talker">
+                    ${message.user_name}
                     </div>
-                    <div class="message__lower">
-                      <p class="message__lower__text">
-                      ${message.text}
-                      </p>
-                      ${image}
+                    <div class="message__upper-info__date">
+                    ${message.created_at}
                     </div>
+                  </div>
+                  <div class="message__lower">
+                    <p class="message__lower__text">
+                    ${message.text}
+                    </p>
+                    ${image}
                   </div>
                 </div>`
     return html;
@@ -89,6 +87,7 @@ $(function(){
         data: {id: last_message_id},
       })
       .done(function(messages) {
+        console.log(messages)
         var insertHTML = '';
         messages.forEach(function(message) {
           insertHTML = buildMessageHTML(message);
